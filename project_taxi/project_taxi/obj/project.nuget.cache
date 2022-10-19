@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Kb0xUPX3HK4reaqA5O2ryQxl3gpA1rLvACXCbLMz0Q0huR9EJbJ4BYDNV+hcx85VmARDRufJ39mL8jORc6TFFw==",
+  "success": true,
+  "projectFilePath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi.csproj",
+  "expectedPackageFiles": [
+    "/Users/richardhaim/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/richardhaim/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/richardhaim/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/richardhaim/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/richardhaim/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/richardhaim/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
