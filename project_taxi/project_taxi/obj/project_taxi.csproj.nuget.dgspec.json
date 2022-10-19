@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi.csproj": {}
+    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj": {}
   },
   "projects": {
-    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi.csproj": {
+    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi.csproj",
+        "projectUniqueName": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj",
         "projectName": "project_taxi",
-        "projectPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi.csproj",
+        "projectPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj",
         "packagesPath": "/Users/richardhaim/.nuget/packages/",
-        "outputPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/obj/",
+        "outputPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/richardhaim/.nuget/NuGet/NuGet.Config"
