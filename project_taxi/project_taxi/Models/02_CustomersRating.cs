@@ -3,9 +3,8 @@ namespace project_taxi.Models
 {
     public class Kundenrating
     {
-        public Kundenrating()
-        {
-        }
+        public int rating_stars { get; set; } // from 0 to 5 -> controller to avoid others
+        public string rating_comment { get; set; } // free text
     }
 }
 
