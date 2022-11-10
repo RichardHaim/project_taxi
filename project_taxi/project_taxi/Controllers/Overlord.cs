@@ -50,9 +50,3 @@ namespace project_taxi.Controllers
         }
     }
 }
-
-// POST api/Overlord>
-[HttpPost]
-[Route("/Taxi_Zentrale")]
-public ActionResult Post([FromBody] _0_ZentraleService request)
-{
