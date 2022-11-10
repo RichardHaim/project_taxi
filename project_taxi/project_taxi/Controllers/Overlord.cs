@@ -10,11 +10,18 @@ namespace project_taxi.Controllers
     public class Overlord : ControllerBase
     {
 
+
+        static List<_0_ZentraleService> zentraleList;
+        static Overlord()
+        {
+            zentraleList = new List<_0_ZentraleService>();
+        }
+
         // GET: api/<Overlord>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<_0_ZentraleService> Get()
         {
-            return new string[] { "value1", "value2" };
+            return zentraleList;
         }
 
         // GET api/<Overlord>/5
