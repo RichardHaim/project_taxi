@@ -10,6 +10,7 @@ namespace project_taxi.Controllers
     [ApiController]
     public class Overlord : ControllerBase
     {
+        public static int customer_ID_share;
         static List<ZentraleService> zentraleList;
         static Overlord()
         {
@@ -34,6 +35,7 @@ namespace project_taxi.Controllers
                 // speicher taxi_busy in DeliveryService_Control als true (also besetzt)
                 zentrale_ID.customer_ID = zentraleList.Count + 1;
                 zentraleList.Add(zentrale_ID);
+                customer_ID_share = zentrale_ID.customer_ID;
                 DeliveryService_Controller.taxi_busy = true;
 
                 // Taxi holt sich die (letzte) ID vom Overlord

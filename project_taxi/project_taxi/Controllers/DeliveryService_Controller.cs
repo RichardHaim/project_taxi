@@ -6,6 +6,8 @@ using project_taxi.Models;
 
 namespace project_taxi.Controllers
 {
+
+
     [Route("api/[controller]")]
     public class DeliveryService_Controller : Controller
     {
@@ -19,27 +21,36 @@ namespace project_taxi.Controllers
             fahrerList = new List<Fahrservice>();
         }
 
+        [Route(*/ "einsteigen")]
+        public void FahrerSteigtEin()
+        {
+            taxi_busy = true;
+        }
 
-        // GET: api/values
+        [Route(*/ "aussteigen")]
+        public void FahrersteigtAus()
+        {
+            taxi_busy = false;
+        }
+
+
+
+        // GET: api/<Overlord>
         [HttpGet]
         public List<Fahrservice> Get()
         {
             return fahrerList;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
+        // Fahrer ist unterwegs, und nach 1 Minute ist er wieder frei
         // POST api/values
-        //[HttpPost]
-        //public void Post([FromBody] DeliveryService_Controller value)
-        //{
-        //    value.taxi_busy;
-        //}
+        [HttpPost]
+        public void Post([FromBody] Fahrservice fahrer_ID)
+        {
+            fahrer_ID.customer_ID = Overlord.customer_ID_share;
+            fahrer_ID.rating_clearance = false;
+            fahrerList.Add(fahrer_ID);
+        }
 
         // PUT api/values/5
         [HttpPut("{id}")]
@@ -47,11 +58,6 @@ namespace project_taxi.Controllers
         {
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
 
