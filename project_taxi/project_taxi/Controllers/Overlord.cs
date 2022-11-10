@@ -34,9 +34,13 @@ namespace project_taxi.Controllers
 
         // POST api/<Overlord>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Fahrservice value)
         {
+            value.customer_ID += 1;
+
             // if-Abfrage machen
+            // wenn Delivery-Service taxi_busy == 1: Schleife
+            // wenn Delivery-Service taxi_busy == 0: Buchung und Erstellung der ID
         }
 
         // brauchen wir glaube ich nicht
