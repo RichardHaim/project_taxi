@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isabe\\source\\repos\\project_taxi\\project_taxi\\project_taxi\\project_taxi.csproj": {}
+    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isabe\\source\\repos\\project_taxi\\project_taxi\\project_taxi\\project_taxi.csproj": {
+    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isabe\\source\\repos\\project_taxi\\project_taxi\\project_taxi\\project_taxi.csproj",
+        "projectUniqueName": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj",
         "projectName": "project_taxi",
-        "projectPath": "C:\\Users\\isabe\\source\\repos\\project_taxi\\project_taxi\\project_taxi\\project_taxi.csproj",
-        "packagesPath": "C:\\Users\\isabe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isabe\\source\\repos\\project_taxi\\project_taxi\\project_taxi\\obj\\",
+        "projectPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj",
+        "packagesPath": "/Users/richardhaim/.nuget/packages/",
+        "outputPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\isabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/richardhaim/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }
