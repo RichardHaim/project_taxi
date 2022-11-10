@@ -25,38 +25,23 @@ namespace project_taxi.Controllers
             return zentraleList;
         }
 
-        // brauchen wir glaube ich nicht
-        // GET api/<Overlord>/5
-        // [HttpGet("{id}")]
-        // public string Get(int id)
-        // {
-        //     return "value";
-        // }
-
         // POST api/<Overlord>
         [HttpPost]
         public void Post([FromBody] ZentraleService value)
         {
+            // hier noch die Abfrage, ob DeliveryService True ist
+
+            // vergibt customer_ID, die in Liste von ZentraleService gespeichert wird
             value.customer_ID = zentraleList.Count + 1;
             zentraleList.Add(value);
-        
-
-            // if-Abfrage machen
-            // wenn Delivery-Service taxi_busy == 1: Schleife
-            // wenn Delivery-Service taxi_busy == 0: Buchung und Erstellung der ID
         }
 
-        // brauchen wir glaube ich nicht
+        // hier sollte der Overlord an den 01_DeliveryService die customerID übergeben
+        // gleichzeitig auch das taxi_busy vom DeliveryService auf True setzen
+        // taxi_busy im Delivery Service bleibt 1 Minute lang auf True, danach automatisch auf false setzen
         // PUT api/<Overlord>/5
         // [HttpPut("{id}")]
         // public void Put(int id, [FromBody] string value)
-        // {
-        // }
-
-        // brauchen wir glaube ich nicht
-        // DELETE api/<Overlord>/5
-        // [HttpDelete("{id}")]
-        // public void Delete(int id)
         // {
         // }
     }
