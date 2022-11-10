@@ -10,43 +10,47 @@ namespace project_taxi.Controllers
     public class Overlord : ControllerBase
     {
 
-        // GET: api/<Overlord>
-        [HttpGet]
-        public IEnumerable<string> Get()
+
+        static List<_0_ZentraleService> zentraleList;
+        static Overlord()
         {
-            return new string[] { "value1", "value2" };
+            zentraleList = new List<_0_ZentraleService>();
         }
 
-        // GET api/<Overlord>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        // GET: api/<Overlord>
+        [HttpGet]
+        public List<_0_ZentraleService> Get()
         {
-            return "value";
+            return zentraleList;
         }
+
+        // brauchen wir glaube ich nicht
+        // GET api/<Overlord>/5
+        // [HttpGet("{id}")]
+        // public string Get(int id)
+        // {
+        //     return "value";
+        // }
 
         // POST api/<Overlord>
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            // if-Abfrage machen
         }
 
+        // brauchen wir glaube ich nicht
         // PUT api/<Overlord>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        // [HttpPut("{id}")]
+        // public void Put(int id, [FromBody] string value)
+        // {
+        // }
 
+        // brauchen wir glaube ich nicht
         // DELETE api/<Overlord>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        // [HttpDelete("{id}")]
+        // public void Delete(int id)
+        // {
+        // }
     }
-
-
-    // POST api/Overlord>
-    [HttpPost]
-    [Route("/Taxi_Zentrale")]
-    public ActionResult Post([FromBody] _0_ZentraleService request);
-
 }
