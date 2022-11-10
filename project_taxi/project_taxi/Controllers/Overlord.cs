@@ -10,8 +10,8 @@ namespace project_taxi.Controllers
     [ApiController]
     public class Overlord : ControllerBase
     {
-        public List<ZentraleService> zentraleList;
-        public Overlord()
+        static List<ZentraleService> zentraleList;
+        static Overlord()
         {
             zentraleList = new List<ZentraleService>();
         }
@@ -29,9 +29,12 @@ namespace project_taxi.Controllers
         {
             // hier noch die Abfrage, ob DeliveryService True ist
             if (DeliveryService_Controller.taxi_busy == false)
+            {
                 // vergibt customer_ID, die in Liste von ZentraleService gespeichert wird
                 zentrale_ID.customer_ID = zentraleList.Count + 1;
                 zentraleList.Add(zentrale_ID);
+                return Ok(zentrale_ID);
+            }
             return NotFound("Fahrer besetzt");
         }
 
