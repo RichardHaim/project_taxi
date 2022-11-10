@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Numerics;
+using Microsoft.AspNetCore.Mvc;
 using project_taxi.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,15 +12,15 @@ namespace project_taxi.Controllers
     {
 
 
-        static List<_0_ZentraleService> zentraleList;
+        static List<ZentraleService> zentraleList;
         static Overlord()
         {
-            zentraleList = new List<_0_ZentraleService>();
+            zentraleList = new List<ZentraleService>();
         }
 
         // GET: api/<Overlord>
         [HttpGet]
-        public List<_0_ZentraleService> Get()
+        public List<ZentraleService> Get()
         {
             return zentraleList;
         }
@@ -34,9 +35,11 @@ namespace project_taxi.Controllers
 
         // POST api/<Overlord>
         [HttpPost]
-        public void Post([FromBody] Fahrservice value)
+        public void Post([FromBody] ZentraleService value)
         {
-            value.customer_ID += 1;
+            value.customer_ID = zentraleList.Count + 1;
+            zentraleList.Add(value);
+        
 
             // if-Abfrage machen
             // wenn Delivery-Service taxi_busy == 1: Schleife
