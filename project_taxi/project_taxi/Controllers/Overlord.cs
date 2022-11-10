@@ -35,10 +35,16 @@ namespace project_taxi.Controllers
                 zentrale_ID.customer_ID = zentraleList.Count + 1;
                 zentraleList.Add(zentrale_ID);
                 DeliveryService_Controller.taxi_busy = true;
+
+                // Taxi holt sich die (letzte) ID vom Overlord
                 return Ok(zentrale_ID);
             }
+
             // hier brauchen wir eine Schleife, die alle 10 Sekunden abfrägt
+            // Schleife, die die POST-Funktion alle 10 Sekunden aufruft.
+            // Wenn Fahrer nicht mehr besetzt ist, wird automatisch eh die obere return aufgerufen
             return NotFound("Fahrer besetzt");
+
         }
 
         // hier sollte der Overlord an den 01_DeliveryService die customerID übergeben
