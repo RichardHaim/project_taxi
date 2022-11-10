@@ -41,7 +41,6 @@ namespace project_taxi.Controllers
                 zentraleList.Add(zentrale_ID);                          // speichert ID in liste
                 customer_ID_share = zentrale_ID.customer_ID;            // speichert ID in public variable (Zugriff für alle)
                 DeliveryServiceController.taxi_busy = true;             // besetzt das Taxi
-
                 return Ok(zentrale_ID.customer_ID);                     // übergibt ID an den Client
             }
             // return an Client wenn das Taxi besetzt ist
