@@ -24,29 +24,33 @@ namespace project_taxi.Controllers
             return zentraleList;
         }
 
+        // brauchen wir glaube ich nicht
         // GET api/<Overlord>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        // [HttpGet("{id}")]
+        // public string Get(int id)
+        // {
+        //     return "value";
+        // }
 
         // POST api/<Overlord>
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            // if-Abfrage machen
         }
 
+        // brauchen wir glaube ich nicht
         // PUT api/<Overlord>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        // [HttpPut("{id}")]
+        // public void Put(int id, [FromBody] string value)
+        // {
+        // }
 
+        // brauchen wir glaube ich nicht
         // DELETE api/<Overlord>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        // [HttpDelete("{id}")]
+        // public void Delete(int id)
+        // {
+        // }
     }
 }
