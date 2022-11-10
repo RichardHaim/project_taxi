@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj": {}
+    "C:\\Users\\kakic\\OneDrive - CAMPUS 02 Fachhochschule der Wirtschaft GmbH\\WS22\\Web Services\\Taxi_Projekt\\Taxi_Projekt_Files\\project_taxi\\project_taxi\\project_taxi.csproj": {}
   },
   "projects": {
-    "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj": {
+    "C:\\Users\\kakic\\OneDrive - CAMPUS 02 Fachhochschule der Wirtschaft GmbH\\WS22\\Web Services\\Taxi_Projekt\\Taxi_Projekt_Files\\project_taxi\\project_taxi\\project_taxi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj",
+        "projectUniqueName": "C:\\Users\\kakic\\OneDrive - CAMPUS 02 Fachhochschule der Wirtschaft GmbH\\WS22\\Web Services\\Taxi_Projekt\\Taxi_Projekt_Files\\project_taxi\\project_taxi\\project_taxi.csproj",
         "projectName": "project_taxi",
-        "projectPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/project_taxi.csproj",
-        "packagesPath": "/Users/richardhaim/.nuget/packages/",
-        "outputPath": "/Users/richardhaim/Library/CloudStorage/OneDrive-CAMPUS02FachhochschulederWirtschaftGmbH/_running/Web Services/VisualStudio/project_taxi/project_taxi/project_taxi/obj/",
+        "projectPath": "C:\\Users\\kakic\\OneDrive - CAMPUS 02 Fachhochschule der Wirtschaft GmbH\\WS22\\Web Services\\Taxi_Projekt\\Taxi_Projekt_Files\\project_taxi\\project_taxi\\project_taxi.csproj",
+        "packagesPath": "C:\\Users\\kakic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kakic\\OneDrive - CAMPUS 02 Fachhochschule der Wirtschaft GmbH\\WS22\\Web Services\\Taxi_Projekt\\Taxi_Projekt_Files\\project_taxi\\project_taxi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/richardhaim/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\kakic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

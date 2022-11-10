@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using project_taxi.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -42,3 +43,9 @@ namespace project_taxi.Controllers
         }
     }
 }
+
+// POST api/Overlord>
+[HttpPost]
+[Route("/Taxi_Zentrale")]
+public ActionResult Post([FromBody] _0_ZentraleService request)
+{
