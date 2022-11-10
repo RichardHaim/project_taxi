@@ -10,8 +10,8 @@ namespace project_taxi.Controllers
     public class DeliveryService_Controller : Controller
     {
 
-        static bool taxi_busy = false;  // false == free; true == busy
-        static bool event_customerDelivered = false; // false == not delivered, true == delivered
+        public static bool taxi_busy = false;  // false == free; true == busy
+        public bool event_customerDelivered = false; // false == not delivered, true == delivered
 
         static List<Fahrservice> fahrerList;
         static DeliveryService_Controller()
