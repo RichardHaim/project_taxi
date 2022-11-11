@@ -45,7 +45,7 @@ namespace project_taxi.Controllers
                 fahrerList.Add(fahrer_ID);                              // geben die Fahrgast-ID in unsere Liste
                 return Ok("eingestiegen");
             }
-            return BadRequest("Service nicht möglich, Taxi besetzt");   // Fehlermeldung weil Taxi nicht leer
+            return BadRequest("Service nicht möglich");   // Fehlermeldung weil Taxi nicht leer
         }
 
 
@@ -61,13 +61,13 @@ namespace project_taxi.Controllers
         [Route("/aussteigen")]
         public IActionResult aussteigen([FromBody] Fahrservice eintragen)
         {
-            if (DeliveryServiceController.taxi_busy == false)    // Sicherheitsabfrage ob aussteigen möglich
+            if (DeliveryServiceController.taxi_busy == true)    // Sicherheitsabfrage ob aussteigen möglich
             {
                 DeliveryServiceController.taxi_busy = false;
                 fahrerList.Last().rating_clearance = true;
                 return Ok("ausgestiegen");
             }
-            return BadRequest("Service nicht möglich, das Taxi ist leer");
+            return BadRequest("Service nicht möglich");
         }
     }
 }
