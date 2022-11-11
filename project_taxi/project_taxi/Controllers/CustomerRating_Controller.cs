@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using project_taxi.Models;
@@ -10,10 +11,10 @@ using project_taxi.Models;
 namespace project_taxi.Controllers
 {
     [Route("api/[controller]")]
-    public class CustomerRating_Controller : Controller
+    public class CustomerRatingController : Controller
     {
         static List<Kundenrating> ratingList;
-        static CustomerRating_Controller()
+        static CustomerRatingController()
         {
             ratingList = new List<Kundenrating>();
         }
@@ -21,29 +22,33 @@ namespace project_taxi.Controllers
 
         // GET: api/<CustomerRatingController>
         [HttpGet]
+        [Route("/Database_CustomerRating")]
         public List<Kundenrating> Get()
         {
             return ratingList;
         }
 
 
-        // Ablauf - bekommt vom Client übergeben:
-        // 1) customer_ID
-        // 2) OPTIONAL --> Anzahl Sterne (1-5) --> hier vlt dependency injection mit abfrage, ob auch 1-5 übergeben wurde & wenn nicht -> Fehler
-        // 2) Kommentar
+        [HttpPost]
+        [Route("/rate_me")]
+        public IActionResult Post(int id, int stars, string freetext, [FromBody] Kundenrating data)          // neuer Fahrgast wird registriert
+        {
+            // Abfrage ratingClearance == true
+            // rated = false als init
+            // rated = true wenn fertig
+            // BadRequest wenn customer_number schon rating abgegeben hat
 
-        // POST api/values
-        //[HttpPost]
-        //public void Post(int target_ID, [FromBody] Kundenrating rate_me)
-        //{
-            // OPEN
-        //    var find_me = rate_me.customer_ID;
-        //    find_me.Contains(target_ID);
-        //}
-
-
-
-
+            if (DeliveryServiceController.taxi_busy == false && DeliveryServiceController.rating_clearance == true)
+            {
+                data.customer_ID = Overlord.customer_ID_share;
+                data.rating_stars = stars;
+                data.rating_comment = freetext;
+                ratingList.Add(data);
+                DeliveryServiceController.rating_clearance = false;
+                return Ok("Rating abgegeben");
+            }
+            return BadRequest("Rating nicht möglich");
+        }
     }
 }
 

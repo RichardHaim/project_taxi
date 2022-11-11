@@ -12,6 +12,7 @@ namespace project_taxi.Controllers
     public class DeliveryServiceController : Controller
     {
 
+        public static bool rating_clearance;        // damit andere controller die rating clearance auslesen können
         public static bool taxi_busy = false;  // false == free; true == busy
 
         static List<Fahrservice> fahrerList;
@@ -21,9 +22,9 @@ namespace project_taxi.Controllers
         }
 
 
-
-        // GET: api/<Overlord>
+        // GET: api/<DeliveryServiceController>
         [HttpGet]
+        [Route("/Database_DeliveryService")]
         public List<Fahrservice> Get()
         {
             return fahrerList;
@@ -49,14 +50,6 @@ namespace project_taxi.Controllers
         }
 
 
-            // PUT api/values/5
-            [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-
-
         [HttpPut]
         [Route("/aussteigen")]
         public IActionResult aussteigen([FromBody] Fahrservice eintragen)
@@ -65,6 +58,7 @@ namespace project_taxi.Controllers
             {
                 DeliveryServiceController.taxi_busy = false;
                 fahrerList.Last().rating_clearance = true;
+                DeliveryServiceController.rating_clearance = true;
                 return Ok("ausgestiegen");
             }
             return BadRequest("Service nicht möglich");

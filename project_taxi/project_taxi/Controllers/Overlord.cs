@@ -22,6 +22,7 @@ namespace project_taxi.Controllers
 
         // GET: api/<Overlord>
         [HttpGet]
+        [Route("/Database_Overlord")]
         public List<ZentraleService> Get()
         {
             return zentraleList;
@@ -45,13 +46,6 @@ namespace project_taxi.Controllers
             }
             // return an Client wenn das Taxi besetzt ist
             return Conflict("Keine Buchung möglich, der Fahrer ist besetzt");
-        }
-
-
-        // PUT api/<Overlord>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
         }
     }
 }
