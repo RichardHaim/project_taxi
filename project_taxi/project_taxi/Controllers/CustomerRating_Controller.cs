@@ -27,23 +27,19 @@ namespace project_taxi.Controllers
         }
 
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-
+        // Ablauf - bekommt vom Client übergeben:
+        // 1) customer_ID
+        // 2) OPTIONAL --> Anzahl Sterne (1-5) --> hier vlt dependency injection mit abfrage, ob auch 1-5 übergeben wurde & wenn nicht -> Fehler
+        // 2) Kommentar
 
         // POST api/values
-        [HttpPost]
-        public void Post(int target_ID, [FromBody] Kundenrating rate_me)
-        {
+        //[HttpPost]
+        //public void Post(int target_ID, [FromBody] Kundenrating rate_me)
+        //{
             // OPEN
-            var find_me = rate_me.customer_ID;
-            find_me.Contains(target_ID)
-        }
+        //    var find_me = rate_me.customer_ID;
+        //    find_me.Contains(target_ID);
+        //}
 
 
 

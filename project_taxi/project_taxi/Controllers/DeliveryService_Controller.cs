@@ -32,34 +32,27 @@ namespace project_taxi.Controllers
 
 
         // POST api/values
+        // NICHT MEHRFACH EINSTEIGEN !!!
+
         [HttpPost]
-        [Route("/Fahrgast_registrieren")]
-        public void Post([FromBody] Fahrservice fahrer_ID)          // neuer Fahrgast wird registriert
-        {
-            fahrer_ID.customer_ID = Overlord.customer_ID_share;     // wir holen uns die letzte ID vom Overlord
-            fahrer_ID.rating_clearance = false;                     // setzen die rating clearance auf false
-            fahrerList.Add(fahrer_ID);                              // geben die Fahrgast-ID in unsere Liste
-        }
-
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-
-
-        [HttpPut]
         [Route("/einsteigen")]
-        public IActionResult einsteigen()                                   // client meldet Einstieg
+        public IActionResult Post([FromBody] Fahrservice fahrer_ID)          // neuer Fahrgast wird registriert
         {
-            if (DeliveryServiceController.taxi_busy == true)                // Sicherheitsabfrage ob einsteigen möglich
+            if (DeliveryServiceController.taxi_busy == true)
             {
+                fahrer_ID.customer_ID = Overlord.customer_ID_share;     // wir holen uns die letzte ID vom Overlord
+                fahrer_ID.rating_clearance = false;                     // setzen die rating clearance auf false
+                fahrerList.Add(fahrer_ID);                              // geben die Fahrgast-ID in unsere Liste
                 return Ok("eingestiegen");
-                
             }
             return BadRequest("Service nicht möglich, Taxi besetzt");   // Fehlermeldung weil Taxi nicht leer
+        }
+
+
+            // PUT api/values/5
+            [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
+        {
         }
 
 
