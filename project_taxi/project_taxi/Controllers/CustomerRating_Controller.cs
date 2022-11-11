@@ -33,10 +33,11 @@ namespace project_taxi.Controllers
         [Route("/rate_me")]
         public IActionResult Post(int id, int stars, string freetext, [FromBody] Kundenrating data)          // neuer Fahrgast wird registriert
         {
-            // Abfrage ratingClearance == true
-            // rated = false als init
-            // rated = true wenn fertig
-            // BadRequest wenn customer_number schon rating abgegeben hat
+            data.rated = false;
+
+            // von bier bis nächstes if -> dependency injection
+            if (stars < 1 | stars > 5)
+                return StatusCode(412); // status precondition failed; The request did not match the pre-conditions of the requested resource.
 
             if (DeliveryServiceController.taxi_busy == false && DeliveryServiceController.rating_clearance == true)
             {
