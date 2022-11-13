@@ -46,7 +46,7 @@ namespace project_taxi.Controllers
                 fahrerList.Add(fahrer_ID);                              // geben die Fahrgast-ID in unsere Liste
                 return Ok("eingestiegen");
             }
-            return BadRequest("Service nicht möglich");   // Fehlermeldung weil Taxi nicht leer
+            return Conflict("Service nicht möglich");   // Fehlermeldung weil Taxi nicht leer
         }
 
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-namespace project_taxi.Models
+namespace project_taxi.Controllers
 {
     public class Kundenrating
     {
