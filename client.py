@@ -17,7 +17,6 @@ class Client():
             'Accept':'application/json'}
         self.api_ID = "noch leer"
 
-
     def exit_check(self, api_return):
         if api_return.status_code == 200:
             return
@@ -34,6 +33,7 @@ class Client():
 
 
     def buchung(self):
+        print(f'\nBuchungsprogramm gestartet')
         port = input("Bitte localhost-port eingeben: ")
         self.api_url = self.api_url + port
         api_connector = self.api_url + "/Buchungsanfrage" 
@@ -82,7 +82,8 @@ class Client():
         print(response.json())
         
         self.counting(3)
-        #self.aussteigen()
+        #todo -> Bewertungssystem funktioniert in der API noch nicht
+        #self.bewerten()
 
 
 
@@ -90,7 +91,7 @@ class Client():
         api_connector = self.api_url + "/rate_me"
         print(f'\nSie dürfen nun die Fahrt bewerten\n')
         stars = input("Bitte geben Sie eine Sternebewertung zwischen 1 und 5 ab: ")
-        comment = input("Hier dürfen Sie Text eingeben")
+        comment = input("Hier dürfen Sie freien Text für Ihre Bewertung eingeben")
         print("Ihre Angaben werden bearbeitet, bitte warten")
 
         bewertung_data = {
