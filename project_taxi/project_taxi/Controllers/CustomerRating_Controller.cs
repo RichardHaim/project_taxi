@@ -18,7 +18,7 @@ namespace project_taxi.Controllers
         
         private readonly ICustomerRatingService _ratingcheck;
         private readonly IConfiguration _configuration;
-        static List<Kundenrating> ratingList;
+        public List<Kundenrating> ratingList;
 
         //Constructor Injection
         public CustomerRatingController(ICustomerRatingService ratingcheck, IConfiguration configuration)
@@ -51,25 +51,22 @@ namespace project_taxi.Controllers
         {
             request.rated = false;
 
-            // check via dependency injection ob client sterne zwischen 1 und 5 gegeben hat. Andernfalls Fehlerlemdung
-            int ergebnis = _ratingcheck.rating_review(request);
+            // check via dependency injection ob client sterne zwischen 1 und 5 gegeben hat. Andernfalls Fehlermeldung
+            stars = request.rating_stars;
+            int ergebnis = _ratingcheck.rating_review(stars);
             if (ergebnis == -1)
                 return StatusCode(412);
 
-            // von bier bis nächstes if -> dependency injection
-            //if (stars < 1 | stars > 5)
-                //return StatusCode(412); // status precondition failed; The request did not match the pre-conditions of the requested resource.
+            if (DeliveryServiceController.taxi_busy == true)
+                return BadRequest("Rating nicht möglich");
 
-            if (DeliveryServiceController.taxi_busy == false && DeliveryServiceController.rating_clearance == true)
-            {
-                request.customer_ID = Overlord.customer_ID_share;
-                request.rating_stars = stars;
-                request.rating_comment = freetext;
-                ratingList.Add(request);
-                DeliveryServiceController.rating_clearance = false;
-                return Ok("Rating abgegeben");
-            }
-            return BadRequest("Rating nicht möglich");
+            request.customer_ID = Overlord.customer_ID_share;
+            request.rating_stars = stars;
+            request.rating_comment = freetext;
+            request.rated = true;
+            ratingList.Add(request);
+            DeliveryServiceController.rating_clearance = false;
+            return Ok("Rating abgegeben");
         }
     }
 }
