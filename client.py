@@ -112,5 +112,5 @@ if __name__ == "__main__":
     c.einsteigen()
     c.aussteigen()
     #todo -> Bewertungssystem funktioniert in der API noch nicht
-    #c.bewerten()
+    c.bewerten()
 
