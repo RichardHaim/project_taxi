@@ -29,13 +29,6 @@ namespace project_taxi.Controllers
         }
 
 
-        //static CustomerRatingController()
-        //{
-        //    ratingList = new List<Kundenrating>();
-        //}
-
-
-
         // GET: api/<CustomerRatingController>
         [HttpGet]
         [Route("/Database_CustomerRating")]
