@@ -49,8 +49,6 @@ class Client():
         print(f'Ihr Taxi wurde gebucht, Ihre Kennung ist die {self.api_ID}')
 
         self.counting(3)
-        self.einsteigen()
-
 
 
     def einsteigen(self):
@@ -66,7 +64,6 @@ class Client():
         print(response.json())
         
         self.counting(3)
-        self.aussteigen()
 
 
     def aussteigen(self):
@@ -82,8 +79,7 @@ class Client():
         print(response.json())
         
         self.counting(3)
-        #todo -> Bewertungssystem funktioniert in der API noch nicht
-        #self.bewerten()
+
 
 
 
@@ -113,3 +109,8 @@ class Client():
 if __name__ == "__main__":
     c = Client()
     c.buchung()
+    c.einsteigen()
+    c.aussteigen()
+    #todo -> Bewertungssystem funktioniert in der API noch nicht
+    #c.bewerten()
+
