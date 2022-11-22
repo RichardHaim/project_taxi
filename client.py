@@ -14,7 +14,8 @@ class Client():
         self.data = {}
         self.headers : str={
             'Content-type':'application/json', 
-            'Accept':'application/json'}
+            'Accept':'application/json',
+            'XApiKey':'kommst_du_net_rein'}     # sending the API-key to the controller
         self.api_ID = "noch leer"
 
     def exit_check(self, api_return):
