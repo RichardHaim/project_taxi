@@ -1,12 +1,10 @@
 ﻿using System.Numerics;
 using Microsoft.AspNetCore.Mvc;
 using project_taxi.Models;
-
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace project_taxi.Controllers
 {
-
 
     [Route("api/[controller]")]
     public class DeliveryServiceController : Controller
