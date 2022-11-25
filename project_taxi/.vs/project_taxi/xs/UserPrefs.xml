@@ -1,18 +1,14 @@
 ﻿<Properties StartupConfiguration="{2247B0AE-AA26-4695-ABE2-223AB293F81F}|Default">
   <MonoDevelop.Ide.ItemProperties.project__taxi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="project_taxi/Controllers/CustomerRating_Controller.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="project_taxi/appsettings.json">
     <Files>
-      <File FileName="project_taxi/Controllers/Overlord.cs" Line="45" Column="53" />
-      <File FileName="project_taxi/Controllers/DeliveryService_Controller.cs" Line="15" Column="45" />
-      <File FileName="project_taxi/Models/01_DeliveryService.cs" Line="8" Column="1" />
-      <File FileName="project_taxi/Controllers/CustomerRating_Controller.cs" Line="59" Column="1" />
-      <File FileName="project_taxi/Models/02_CustomersRating.cs" Line="6" Column="6" />
-      <File FileName="project_taxi/Service/CustomerRatingService.cs" Line="10" Column="6" />
-      <File FileName="project_taxi/appsettings.json" Line="8" Column="23" />
+      <File FileName="project_taxi/appsettings.json" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,8 +16,10 @@
           <Node name="project_taxi" expanded="True">
             <Node name="project_taxi" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="middleware" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Service" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
@@ -31,6 +29,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

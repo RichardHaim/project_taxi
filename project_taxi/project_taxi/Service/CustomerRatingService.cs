@@ -16,11 +16,6 @@ namespace project_taxi.Service
             int return_value = stars;
             if (stars < 0 | stars > 5)
                 return_value = -1;
-            //int return_value = request.rating_stars;
-            //if (request.rating_stars <0 | request.rating_stars > 5)
-            //{
-                // return_value = -1;
-            //}
             return return_value;
 
         }
