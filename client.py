@@ -1,14 +1,10 @@
 import requests
 import json
 import time
-
 from contextlib import contextmanager
 import sys, os
 
-
-
 class Client():
-
     def __init__(self):
         self.api_url = "https://localhost:"
         self.data = {}
@@ -30,8 +26,6 @@ class Client():
             n -= 1
         print(" ", end='\r')
         return
-        
-
 
     def buchung(self):
         print(f'\nBuchungsprogramm gestartet')
@@ -51,7 +45,6 @@ class Client():
 
         self.counting(3)
 
-
     def einsteigen(self):
         api_connector = self.api_url + "/einsteigen"
         print(f'\nIhr Taxi ist angekommen, Sie dürfen nun einsteigen\n')
@@ -66,7 +59,6 @@ class Client():
         
         self.counting(3)
 
-
     def aussteigen(self):
         api_connector = self.api_url + "/aussteigen"
         print(f'\nSie sind an Ihrem Ziel angekommen, Sie dürfen nun aussteigen\n')
@@ -80,9 +72,6 @@ class Client():
         print(response.json())
         
         self.counting(3)
-
-
-
 
     def bewerten(self):
         api_connector = self.api_url + "/rate_me"
@@ -104,14 +93,10 @@ class Client():
         print(response.json())
         sys.exit("Vielen Dank, dass Sie unseren Service genutzt haben & bis bald")
 
-
-
-
-if __name__ == "__main__":
+i
+f __name__ == "__main__":
     c = Client()
     c.buchung()
     c.einsteigen()
     c.aussteigen()
-    #todo -> Bewertungssystem funktioniert in der API noch nicht
     c.bewerten()
-
